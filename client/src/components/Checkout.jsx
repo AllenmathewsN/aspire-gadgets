@@ -14,7 +14,7 @@ export default function Checkout({ cartItems, onRemove, onBack, onSuccess, showT
   async function placeOrder() {
     if (!form.fname || !form.payment) { showToast('Please fill in your name and payment method'); return }
     try {
-      await fetch(`${import.meta.env.VITE_API_URL || ''}/api/orders`, {
+      await fetch(`${import.meta.env.VITE_API_URL || 'https://aspire-gadgets-production.up.railway.app'}/api/orders`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

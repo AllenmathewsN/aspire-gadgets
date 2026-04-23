@@ -8,7 +8,7 @@ import WaIcon from './components/WaIcon'
 
 const WA_NUMBER = '254712345678'
 
-const API = import.meta.env.VITE_API_URL || ''
+const API = import.meta.env.VITE_API_URL || 'https://aspire-gadgets-production.up.railway.app'
 
 export default function App() {
   const [categories, setCategories] = useState([])
