@@ -1,6 +1,6 @@
 import WaIcon from './WaIcon'
 
-const WA_NUMBER = '254712345678'
+const WA_NUMBER = '254711292891'
 
 export default function Topbar({ cartCount, onCartClick, onSearch, searchVal }) {
   return (

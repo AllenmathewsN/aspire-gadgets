@@ -1,7 +1,7 @@
 import WaIcon from './WaIcon'
 
 const CAT_EMOJIS = { 'Hot Phones': '📱', Smartphones: '📱', Accessories: '🎧', TVs: '📺', Audio: '🔊' }
-const WA_NUMBER = '254712345678'
+const WA_NUMBER = '254711292891'
 
 export default function ProductModal({ item, onClose, onAddToCart }) {
   if (!item) return null

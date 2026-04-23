@@ -6,7 +6,7 @@ import Checkout from './components/Checkout'
 import Toast from './components/Toast'
 import WaIcon from './components/WaIcon'
 
-const WA_NUMBER = '254712345678'
+const WA_NUMBER = '254711292891'
 
 const API = import.meta.env.VITE_API_URL || 'https://aspire-gadgets-production.up.railway.app'
 

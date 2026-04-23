@@ -2,7 +2,7 @@ import { useState } from 'react'
 import WaIcon from './WaIcon'
 
 const CAT_EMOJIS = { 'Hot Phones': '📱', Smartphones: '📱', Accessories: '🎧', TVs: '📺', Audio: '🔊' }
-const WA_NUMBER = '254712345678'
+const WA_NUMBER = '254711292891'
 
 export default function Checkout({ cartItems, onRemove, onBack, onSuccess, showToast }) {
   const [form, setForm] = useState({ fname: '', lname: '', phone: '', location: '', payment: '' })
