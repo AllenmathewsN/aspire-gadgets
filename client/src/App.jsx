@@ -8,6 +8,8 @@ import WaIcon from './components/WaIcon'
 
 const WA_NUMBER = '254712345678'
 
+const API = import.meta.env.VITE_API_URL || ''
+
 export default function App() {
   const [categories, setCategories] = useState([])
   const [activeTab, setActiveTab] = useState(0)
@@ -22,7 +24,7 @@ export default function App() {
   const [toast, setToast] = useState('')
 
   useEffect(() => {
-    fetch('/api/categories')
+    fetch(`${API}/api/categories`)
       .then(r => r.json())
       .then(data => {
         setCategories(data)
@@ -36,7 +38,7 @@ export default function App() {
     setSearchResults(null)
     setPanelLabel(cats[idx]?.label || '')
     setLoading(true)
-    fetch(`/api/products?category_id=${cats[idx].id}`)
+    fetch(`${API}/api/products?category_id=${cats[idx].id}`)
       .then(r => r.json())
       .then(data => { setItems(data); setLoading(false) })
   }
@@ -44,7 +46,7 @@ export default function App() {
   function handleSearch(val) {
     setSearchVal(val)
     if (!val.trim()) { setSearchResults(null); setPanelLabel(categories[activeTab]?.label || ''); return }
-    fetch(`/api/products/search?q=${encodeURIComponent(val)}`)
+    fetch(`${API}/api/products/search?q=${encodeURIComponent(val)}`)
       .then(r => r.json())
       .then(data => { setSearchResults(data); setPanelLabel(`Results for "${val}"`) })
   }
